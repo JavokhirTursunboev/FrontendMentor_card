@@ -1,0 +1,131 @@
+:root {
+  --primary-col: hsl(158, 36%, 37%);
+  --secondar-col: hsl(30, 38%, 92%);
+  --darkest-col: hsl(212, 21%, 14%);
+  --grayer-col: hsl(212, 21%, 14%);
+  --reutral-col: hsl(0, 0%, 100%);
+
+  --ff-accent: "Fraunces", serif;
+  --ff-base: "Montserrat", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3{
+    line-height:1;
+}
+
+/* general */
+
+body{
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    background-color: var(--secondar-col);
+    color:var(--primary-col);
+
+    display:grid;
+    place-content: center;
+    margin:1rem;
+}
+
+.flex-group{
+    display: flex;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+
+/* ==================Product ============================== */
+
+.product{
+    --content-padding: 1.5rem;
+    --content-spacing: 1rem;
+
+    background-color: var(--reutral-col);
+    border-radius: 0.5rem;
+    overflow:hidden;
+}
+
+.product__content{
+    padding: var(--content-padding);
+    display:grid;
+    gap: var(--content-spacing);
+}
+
+.product__category{
+    font-size: .8125rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.product__title{
+    font-size: 2.1rem;
+    font-family: var(--ff-accent);
+    color:var(--darkest-col);
+}
